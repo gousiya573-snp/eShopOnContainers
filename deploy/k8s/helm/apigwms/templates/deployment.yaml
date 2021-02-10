@@ -61,7 +61,7 @@ spec:
             timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
           {{- end -}}
           {{- end }}
-          image: "{{ template "fqdn-image" . }}:{{ .Values.image.tag }}"
+          image: envoyproxy/envoy:v1.11.1
           imagePullPolicy: IfNotPresent
           volumeMounts:
           - name: config
